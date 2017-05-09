@@ -5,7 +5,9 @@ var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
 
   //Code Here
-
+let first = function(arr){
+return arr[0]
+}
 
 //Next problem
 
@@ -16,7 +18,10 @@ var arr = [40,50,60];
 
 
   //Code Here
+let last = function(arr){
+  return arr[2]
 
+}
 
 //Next Problem
 
@@ -25,7 +30,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
   //Code Here
-
+var looper = function(family){
+  var root = family.map(function(val) {
+  alert(val);
+});
+}
 
 //Next problem
 
@@ -35,7 +44,17 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
+var letters = ['A', 'B', 'C', 'D', 'E'];
+let reversedLooper = function (letters){
+let reLetters = letters.reverse(function(b,a){
+  return b, a
+})
+var root = reLetters.map(function(val){
+  alert(val);
+})
 
+}
+reversedLooper(letters)
 
 //Next Problem
 
@@ -44,7 +63,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
   //Code Here
+function evenFinder(nums){
 
+for (var i = 0; i < nums.length; i++) {
+        while (nums[i] % 2) {
+            nums.splice(i, 1);
+        }
+    }
+    return nums;
+}
 
 //Next problem
 
@@ -56,7 +83,23 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
   //Code Here
-
+let divider = function(numbersArray){
+  let oddsArr = []
+  let evensArr = []
+  let combinedArr = []
+  for (let i = 0; i < numbersArray.length; i++){
+    if(numbersArray[i] % 2){
+      oddsArr.push(numbersArray[i])
+    } 
+    else if(numbersArray[i] % 2 -1){
+      evensArr.push(numbersArray[i])
+    }
+  }
+  combinedArr.push(evensArr)
+  combinedArr.push(oddsArr)
+  return combinedArr
+  
+}
 
 //Next Problem
 
