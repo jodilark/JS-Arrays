@@ -44,17 +44,25 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
-var letters = ['A', 'B', 'C', 'D', 'E'];
-let reversedLooper = function (letters){
-let reLetters = letters.reverse(function(b,a){
-  return b, a
-})
-var root = reLetters.map(function(val){
-  alert(val);
-})
 
+// var reversedLooper = function (letters){
+// var reLetters = letters.reverse()
+// var root = reLetters.map(function(val){
+//   alert(val);
+// })
+
+// }
+// reversedLooper(letters)
+
+var reversedLooper = function(letters){
+  for(let i = letters.length - 1; i >= 0; i--){
+    alert(letters[i])
+  }
 }
-reversedLooper(letters)
+
+
+
+
 
 //Next Problem
 
@@ -113,7 +121,16 @@ var getRandomArbitrary = function() {
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
-
+let finder = function(arr){
+  // loop through the array. If random is in arr, return true
+  var random = getRandomArbitrary()
+  for (let i = 0; i < arr.length; i++){
+    if(random === arr[i]){
+      console.log(arr[i])
+      return true
+    }
+  } return false
+}
   //Code Here
 
 
@@ -125,7 +142,14 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
-
+function reverse(str){
+  let reversed = []
+  let splitStr = str.split("")
+    for (let i = splitStr.length -1; i >= 0; i--){
+      reversed.push(splitStr[i])
+    }
+  return reversed.join("")
+}
 
 //Next Problem
 
