@@ -171,6 +171,38 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
+// Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList.
+//myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs']
+var empty = []
+
+function removeItem(myGroceryList, itemToRemove) {
+  // If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list
+if(myGroceryList === undefined || itemToRemove === undefined){return empty} //check that arguements are valid
+  for (let i = 0; i < myGroceryList.length; i++){
+    if(itemToRemove === myGroceryList[i]){
+      myGroceryList.splice(i, 1)
+      return myGroceryList //return the new, updated grocery list.
+    }
+    else {
+      return myGroceryList
+    }
+  }
+}
+
+//removeItem(myGroceryList, "pizza")
+
+// Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list.
+
+function addItem(myGroceryList, itemToAdd) {
+  // In addItem add the item you passed in to myGroceryList
+if(myGroceryList === undefined || itemToAdd === undefined){return empty} //check that arguements are valid
+  myGroceryList.push(itemToAdd)
+  return myGroceryList //return the new, updated grocery list
+}
+
+//addItem(myGroceryList, "Cheez-its")
+
+
 
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -184,7 +216,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
-
+function maker(){
+  let arr = []
+  for(let i = 1; i < 216; i++){
+    arr.push(i)
+  }
+  return arr
+}
 
 
 //Next Problem
@@ -195,7 +233,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
-
+function addTen(numbers) {
+  let newArr = []
+  for(let i = 0; i < numbers.length; i++){
+    newI = numbers[i] / 1
+    newArr.push(newI + 10)
+  }
+  return newArr
+}
 
 
 //Next Problem
@@ -216,7 +261,14 @@ for(var i = 0; i < num2; i++){
 //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
   //Code Here
-
+function longer(arr1, arr2) {
+  if(arr1.length > arr2.length){
+    return arr1
+  }
+  else {
+    return arr2
+  }
+}
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
@@ -225,6 +277,16 @@ for(var i = 0; i < num2; i++){
 */
 
   //Code Here
+function both(arr1, arr2){
+  let newArr = []
+  for (var i = 0; i < arr1.length; i++) {
+    for (var j = 0; j < arr2.length; j++) {
+        if (arr1[i] == arr2[j]) {
+          newArr.push(arr1[i])
+        }
+    }
+  }  return newArr //return a new array with the matching numbers found in both arr1 and arr2
+}
 
 
 
